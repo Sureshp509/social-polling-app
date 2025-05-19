@@ -1,8 +1,6 @@
 import { useState } from 'react';
 import { User } from '@supabase/auth-js';
 import { supabase } from '../lib/supabase';
-import PollCard from '../components/PollCard';
-import polls from './api/polls';
 import Dashboard from './dashboard';
 
 export default function Home() {

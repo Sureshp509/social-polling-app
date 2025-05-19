@@ -70,10 +70,40 @@ export default function Home() {
 
       {!user ? (
         <>
-          <input className="border p-2 w-full mt-2" type="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} />
-          <input className="border p-2 w-full mt-2" type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
-          <button onClick={() => handleAuth('signup')} className="mt-2 bg-green-500 text-white p-2 rounded-md">Sign Up</button>
-          <button onClick={() => handleAuth('login')} className="mt-2 bg-blue-500 text-white p-2 rounded-md">Login</button>
+       <div className="flex items-center justify-center min-h-screen bg-gray-100">
+  <div className="w-full max-w-md p-8 bg-white rounded-lg shadow-lg">
+   
+    <input
+      className="border border-gray-300 p-3 w-full mb-4 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      type="email"
+      placeholder="Email"
+      onChange={(e) => setEmail(e.target.value)}
+    />
+
+    <input
+      className="border border-gray-300 p-3 w-full mb-6 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+      type="password"
+      placeholder="Password"
+      onChange={(e) => setPassword(e.target.value)}
+    />
+
+    <div className="flex justify-between gap-4">
+      <button
+        onClick={() => handleAuth('signup')}
+        className="flex-1 bg-green-500 hover:bg-green-600 text-white p-3 rounded-md font-semibold transition"
+      >
+        Sign Up
+      </button>
+      <button
+        onClick={() => handleAuth('login')}
+        className="flex-1 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-md font-semibold transition"
+      >
+        Login
+      </button>
+    </div>
+  </div>
+</div>
+
         </>
       ) : (
         <>

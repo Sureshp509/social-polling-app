@@ -51,7 +51,7 @@ export default function PollDetails() {
     }
 
     // Insert vote into Supabase
-    const { error } = await supabase.from('votes').insert([{ poll_id: id, option_id, user_id: user.id }]);
+    const { error } = await supabase.from('votes').insert([{ poll_id: id, optionId, user_id: user.id }]);
 
     if (error) {
       alert(error.message);

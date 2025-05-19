@@ -21,5 +21,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   if (error) return res.status(500).json({ error: error.message });
 
-  res.status(201).json({ vote: data[0] });
+  res.status(201).json({ vote: data });
 }

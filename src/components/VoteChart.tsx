@@ -5,12 +5,10 @@ import { Poll } from '../types';
 interface VoteChartProps {
   poll: Poll;
 }
-
 const VoteChart: React.FC<VoteChartProps> = ({ poll }) => {
   if (!poll?.options || poll.options.length === 0) {
     return <p>No data to display.</p>;
   }
-
   const data = {
     labels: poll.options.map((opt) => opt.text),
     datasets: [

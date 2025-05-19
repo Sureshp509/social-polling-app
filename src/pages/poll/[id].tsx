@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../../lib/supabase';
 import { Poll } from '../../types';
 import PollCard from '../../components/PollCard';
+import { User } from '@supabase/supabase-js';
 
 export default function PollDetails() {
   const router = useRouter();
